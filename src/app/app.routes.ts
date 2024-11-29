@@ -6,16 +6,20 @@ import { PageNotFoundComponent } from './Pages/page-not-found/page-not-found.com
 
 export const routes: Routes = [
   {
+    path: 'Home',
+    component: HomeComponent,
+  },
+  {
+    path: '',
+    component: HomeComponent,
+  },
+  {
     path: 'Login',
     component: LoginComponent,
   },
   {
     path: 'Upload',
     component: UploadFileComponent,
-  },
-  {
-    path: '',
-    component: HomeComponent,
   },
   { path: '**', component: PageNotFoundComponent },
 ];

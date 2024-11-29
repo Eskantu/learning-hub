@@ -1,4 +1,10 @@
+<div class="antialiased h-screen bg-gray-50 dark:bg-gray-900">
+  <div *ngIf="this.AuthService.IsLoggedIn()">
+    <app-ui-top-bar />
+    <app-ui-menu />
+  </div>
 
-<div class="card flex justify-content-center">
-  <p-button label="Check" icon="pi pi-check"></p-button>
+  <main [ngClass]="{ 'p-4 pt-20 md:ml-64': this.AuthService.IsLoggedIn() }">
+    <router-outlet></router-outlet>
+  </main>
 </div>

@@ -3,8 +3,15 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "@pages/*": ["./src/app/Pages/*"],
+      "@components/*": ["./src/app/Components/*"],
+      "@Services*": ["./src/app/Services/*"],
+      "@tools/*": ["./src/app/Tools/*"]
+    },
     "outDir": "./dist/out-tsc",
     "strict": true,
+    "strictPropertyInitialization": false,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
